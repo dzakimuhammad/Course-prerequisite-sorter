@@ -9,20 +9,27 @@ import textcleaning
 import graphmaking
 import dc_and_cq
 
-nama_file = input("Masukkan nama file yang akan dibaca : ")     #input nama file
+#input nama file
+nama_file = input("Masukkan nama file yang akan dibaca : ")     
 print()
-clean_data = textcleaning.clean_text(nama_file) #dapetin matriks dari text file
 
-graf = graphmaking.makegraph(clean_data) #bikin dictionary buat DAG 
-derajat = graphmaking.listderajat(clean_data) #bikin dictionary buat derajat
+#mengubah text file input ke dalam bentuk matriks
+clean_data = textcleaning.get_data(nama_file) 
 
+#dictionary yang merepresentasikan DAG 
+graf = graphmaking.makegraph(clean_data) 
+
+#dictionary yang merepresentasikan derajat tiap node pada DAG
+derajat = graphmaking.listderajat(clean_data) 
+
+#inisialisasi array rencana kuliah
 rencana_kuliah = []
-semester = ["Semester 1", ]
 
+# jalankan topological sort (pendekatan decrease and conquer) selama node belum diassign ke dalam array rencana kuliah
 while (len(graf)>0) :
     dc_and_cq.process(graf, derajat, rencana_kuliah)
 
-
+# mencetak luaran
 print("Rencana Kuliah :")
 for i in range (len(rencana_kuliah)) :
     print("Semester " + str(i+1) + ":", end = " ")

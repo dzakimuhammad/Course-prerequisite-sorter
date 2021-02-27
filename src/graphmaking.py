@@ -1,3 +1,4 @@
+# fungsi membuat representasi DAG dari matriks data menggunakan dictionary
 def makegraph(arr_data) :
     graf = {}
     for data in arr_data :
@@ -8,6 +9,8 @@ def makegraph(arr_data) :
         graf[node] = succ
     return graf
 
+
+# fungsi membuat representasi derajat tiap node dari matriks data menggunakan dictionary
 def listderajat(arr_data) :
     derajat = {}
     for data in arr_data :
@@ -18,6 +21,7 @@ def listderajat(arr_data) :
         derajat[node] = len(succ)
     return derajat
 
+# prosedur memperbaharui derajat tiap node dari graf yang telah diubah
 def updatederajat(graf, derajat) :
     for node in graf :
         derajat[node] = len(graf[node])

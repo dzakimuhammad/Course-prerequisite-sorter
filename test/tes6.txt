@@ -1,0 +1,6 @@
+CA.
+CB, CA.
+CC, CA.
+CD, CB, CC.
+CE, CB, CD.
+CF, CD, CC.

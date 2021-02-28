@@ -24,5 +24,5 @@ Program ini menggunakan bahasa pemrograman Python sehingga untuk menjalankannya 
 ```
 python main.py
 ```
-3. Input lokasi file txt persoalan ketika program meminta input, beberapa data uji txt tersedia dalam folder test (input ../test/*namafile*)
+3. Input lokasi file txt persoalan ketika program meminta input, beberapa data uji txt tersedia dalam folder test (input test/*namafile*)
 4. Program akan berjalan hingga menampilkan luaran berupa susunan rencana mata kuliah yang akan diambil pada setiap semester

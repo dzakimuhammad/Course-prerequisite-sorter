@@ -1,4 +1,4 @@
-import graphmaking
+from graphmaking_13519049 import updatederajat
 
 # proses jalannya topological sort
 def process(graf, derajat, rencana_kuliah) :
@@ -26,4 +26,4 @@ def process(graf, derajat, rencana_kuliah) :
         derajat.pop(matkul_taken)
 
     # memperbaharui derajat dari tiap node setelah graf diubah
-    graphmaking.updatederajat(graf, derajat)
+    updatederajat(graf, derajat)
